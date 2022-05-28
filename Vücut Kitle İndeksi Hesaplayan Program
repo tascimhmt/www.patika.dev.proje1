@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class main1 {
+    public static void main(String[] args){
+       double r,a;
+
+       Scanner inp = new Scanner(System.in);
+       System.out.print("Lütfen Boyunuzu giriniz : ");
+       r = inp.nextDouble();
+
+       System.out.print("Lütfen Kilonuzu giriniz: ");
+       a = inp.nextDouble();
+
+       double endeks = a / (r * r);
+
+       System.out.println("Vucut Kitle Endeksiniz : " + endeks);
+
+    }
+}

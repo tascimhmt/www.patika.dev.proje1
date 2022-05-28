@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class main1 {
+    public static void main(String[] args){
+
+       double armut = 2.14, elma = 3.67, domates = 1.11 , muz = 0.95, patlıcan = 5.00,A,B,C,D,E;
+
+
+       Scanner input = new Scanner(System.in);
+       System.out.print("Armut Kaç Kilo : ");
+       A = input.nextDouble();
+       System.out.print("elma Kaç Kilo : ");
+       B = input.nextDouble();
+       System.out.print("domates Kaç Kilo : ");
+       C = input.nextDouble();
+       System.out.print("muz Kaç Kilo : ");
+       D = input.nextDouble();
+       System.out.print("patlıcan Kaç Kilo : ");
+       E = input.nextDouble();
+       double tutar = (A * armut)+(elma*B)+(domates*C)+(muz*D)+(patlıcan*E);
+
+       System.out.println("Toplam Tutar : " + tutar);
+
+    }
+}

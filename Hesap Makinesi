@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args){
+        int n1 , n2, select, total ;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("ilk Sayıyı Giriniz : ");
+        n1 = input.nextInt();
+        System.out.print("İkinci Sayıyı Giriniz : ");
+        n2 = input.nextInt();
+
+        System.out.println("\n1-Toplama\n2-Çıkarma\n3-Çarpma\n4-Bölme");
+        System.out.print("Seçiniz: ");
+        select = input.nextInt();
+
+        switch (select){
+            case 1 :
+                total = n1 + n2 ;
+                System.out.print(total);
+                break;
+            case 2 :
+                total = n1 - n2 ;
+                System.out.print(total);
+                break;
+            case 3 :
+                total = n1 * n2 ;
+                System.out.print(total);
+                break;
+            case 4:
+                switch (n2){
+                    case 0 :
+                        System.out.print("0 Bolmede Olmaz");
+                        break;
+                    default:
+                        total = n1 / n2;
+                        System.out.print(total);
+                        break;
+                }
+                break;
+            default:
+                System.out.print("Hatalı Seçim");
+
+        }
+
+
+            
+        }
+
+    }
+
+

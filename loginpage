@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String username, password, nPass, nUser;
+        int newPassword, button;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kullanıcı Adınızı Giriniz : ");
+        username = input.nextLine();
+
+        System.out.print("Sifrenizi Giriniz : ");
+        password = input.nextLine();
+
+        if (username.equals("patika") && password.equals("java123")){
+            System.out.println("Şifreniz Doğru ! ");
+
+        }else {
+            System.out.println("Yanlış Şifre Giriniz Girdiniz ! Yeni Sifre Icin '1'i, Iptal Icin '2'yi Tuslayin. ");
+        }
+        button = input.nextInt();
+        input.nextLine();
+
+        switch (button) {
+            case 1:
+                System.out.println("Yeni Kullanıcı Adını Giriniz : ");
+                nUser = input.nextLine();
+
+                System.out.println("Yeni Şifreniz Giriniz : ");
+                nPass = input.nextLine();
+
+                if (nPass.equals(password)) {System.out.println("Yeni sifreniz eski sifreniz ile aynı olamaz.");
+                } else {
+                    System.out.println("Kullanıcı Adınız ve Şifreniz Oluşturuldu.");
+                    System.out.println("Yeni sifreniz :" + nPass );
+                }
+                break;
+            case 2:
+                System.out.println("Şifre Yenileme İşlemi iptal Edilmiştir.");
+                break ;
+        }
+    }
+}

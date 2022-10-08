@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) {
+//Java döngüler ile 0'dan girilen sayıya kadar olan sayılardan
+// 3 ve 4'e tam bölünen sayıların ortalamasını hesaplayan programı yazınız.
+// 30 sayisi   k 12, 24 -- count =2 sum 12+24=36 36/2 --- ans=18
+
+        int count=0,k,sum=0,num=0,ave = 0;
+        Scanner inp = new Scanner(System.in);
+        System.out.println("bir sayı giriniz: ");
+        k = inp.nextInt();
+        while (count<=k){
+            count++;
+            if (count % 3 == 0 && count % 4 == 0){
+                num++;
+                sum+=count;
+                ave=sum/num;
+            }
+        }System.out.println("sayilarin ort ="+ave);
+    }
+}
